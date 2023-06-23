@@ -1,132 +1,225 @@
-// // chapter 17 to 20
-// //Q1)Declare and initialize an empty multidimensional array.(Array of arrays)
+// Q1)Write a program that takes two user inputs for first and
+// last name using prompt and merge them in a new variable
+// titled fullName. Greet the user using his full name.
+// let firstName = prompt("enter your first name")
+// let secondName = prompt("enter your second name")
+// let fullName = firstName + " " + secondName
+// alert("Hello! welcome "+fullName)
 
-// let multiDimensionalArr = [[]];
-// //Q2)Declare and initialize a multidimensional array representing the following matrix:
 
 
-//  let multiDimensionalArr =[
-//      [1,0,1,2]
-//      [0,1,2,3]
-//      [2,1,0,1]
-// ]
 
-// //Q3)Write a program to print numeric counting from 1 to 10.
-// for(let i=1;i<=10;i++){
-// console.log(i)
-// }
-// //Q4)Write a program to print multiplication table of any number using for loop. Table number & length should betaken as an input from user.
-// let tableNumber=+prompt("enter table number")
-// let lengthOfTable=+prompt("enter the length od table")
-// document.write("Multiplication table of ",tableNumber,"<br>" ,"Lenghth ", lengthOfTable)
-// for(let i=1;i<=lengthOfTable;i++){
-//     document.write("<br>")
-//     document.write(tableNumber + " X " + i + " = " + tableNumber*i)
-// }
+// Q2)Write a program to take a user input about his favorite
+// mobile phone model. Find and display the length of user
+// input in your browser
+// let favouritePhone = prompt("enter the name of your favourite phone")
+// document.write("My favourite phone is: " + favouritePhone)
+// document.write("<br>Length of string: " + favouritePhone.length)
 
-// //Q5) Write a program to print items of the following array
-// using for loop:
-// fruits = [“apple”, “banana”, “mango”, “orange”,
-// “strawberry”]
-// fruits = ["apple","banana","mango","orange","strawberry"]
-// for(let i=0;i<fruits.length;i++){
-//     document.write("<br>",fruits[i])
-// } 
-// document.write("<br><br><br>")
-// for(let j=0;j<fruits.length;j++){
-//     document.write("<br>")
-//     document.write("Element at index " ,j , " is " ,fruits[j])
-// }
 
-// //Q6)Generate the following series in your browser. See example output.
-// //a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
-// document.write("<b>Counting</b><br>")
-// let arr1=[]
-// for(let i=1;i<=15;i++){
-//     arr1.push(i)
-// }
-// let result1= arr1.join(", ")
-// document.write(result1,"<br>")
 
-// //b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
-// document.write("<b>Reverse Counting</b><br>")
-// let arr2=[]
-// for(let i=10;i>=1;i--){
-//     arr2.push(i)
-// }
-// let result2= arr2.join(", ")
-// document.write(result2,"<br>")
-// //c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
-// document.write("<b>Even</b><br>")
-// let arr3=[]
-// for(let i=0;i<=20;i++){
-//     if(i%2===0){
-//         arr3.push(i)
+// Q3)Write a program to find the index of letter “n” in the word
+// “Pakistani” and display the result in your browser .
+
+// let word = "Pakistan"
+// document.write("String: " + word)
+// document.write("<br>Index of 'n': "+ word.indexOf("n"))
+
+
+
+// Q4)Write a program to find the last index of letter “l” in the
+// word “Hello World” and display the result in your browser.
+// let word = "Hello World"
+// document.write("String: " + word)
+// document.write("<br>Last index of 'l': "+ word.lastIndexOf("l"))
+
+
+
+// Q5)Write a program to find the character at 3rd index in the
+// word “Pakistani” and display the result in your browser.
+// let word = "Pakistani"
+//  document.write("String: " + word)
+//  document.write("<br>Character at index 3: " + word.charAt(3))
+
+
+
+// Q6)Repeat Q1 using string concat() method.
+// let firstName = prompt("enter your first name")
+// let secondName = prompt("enter your second name")
+// let fullName = firstName.concat(" " + secondName)
+// let greet = "hellow".concat(" "+fullName)
+// alert(greet)
+
+
+// Q7)Write a program to replace the “Hyder” to “Islam” in the
+// word “Hyderabad” and display the result in your browser.
+// let city = "Hyderabad"
+// let newCity=city.slice(0,0) + "Islam" + city.slice(5,9)
+// document.write(newCity)
+
+
+
+// Q8)Write a program to replace all occurrences of “and” in the
+// string with “&” and display the result in your browser.
+// var message = “Ali and Sami are best friends. They play cricket and
+// football together.”;
+//  var message = "Ali and Sami are the best friend.They play cricket and football together"
+//  for(var i=0;i<message.length;i++){
+//     if(message.slice(i,i+3)==="and"){
+//         message=message.slice(0,i)+  "&"+ message.slice(i+3);
 //     }
-// }
-// let result3= arr3.join(", ")
-// document.write(result3,"<br>")
-// //d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
-// document.write("<b>Odd</b><br>")
-// let arr4=[]
-// for(let i=0;i<=20;i++){
-//     if(i%2!==0){
-//         arr4.push(i +'')
-//     }
-// }
-// document.write(arr4+"<br>")
-// //e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
-// document.write("<b>Series</b><br>")
-// let arr5=[]
-// for(let i=1;i<=20;i++){
-//     if(i%2===0){
-//         arr5.push(i+"k ")
-//     }
-// }
-// document.write(arr5+"<br>")
+//  }
+//  document.write(message)
 
-// //Q7)You have an array A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”] Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not. Example:
-let array = ["cake","apple pie","cookies","patties"]
-let userOutput= prompt("Welcome to Deline Cakes🎂.What you want to order")
-let output=false
-for (let i = 0; i < array.length; i++) {
-    if(userOutput===array[i]){
-        output=true
-    }
-}
-   
-if(output){
-document.write(userOutput + " is available in our bakery")
-}
-else   
-document.write(userOutput + " is not available in our bakery")
 
-// //Q8)Write a program to identify the largest number in the given array.
-//  let arr = [24, 53, 78, 91, 12]
+ 
+// Q9)Write a program that converts a string “472” to a number
+// 472. Display the values & types in your browser.
+// let theString= "472"
+// let theNumber = +theString
+// document.write("Value "+ theString + "<br>")
+// document.write("Type: "+ typeof(theString) +"<br>")
+// document.write("Value: "+ theNumber +"<br>")
+// document.write("Type: "+ typeof(theNumber))
 
-// let largestNum= arr[0]
-// for (let i = 1; i < arr.length; i++) {
-//     if (arr[i] > largestNum) {
-//       largestNum = arr[i];
-//     }
+
+
+
+// Q10)Write a program that takes user input. Convert and
+// show the input in capital letters.
+// let userInput = prompt("enter any word in small case")
+// let changeCase =userInput.toUpperCase()
+// document.write("User input: " + userInput +"<br>")
+// document.write("Upper case: "+ changeCase )
+
+
+
+// Q11)Write a program that takes user input. Convert and
+// show the input in title case.
+// let userInput = prompt("enter any word in small case")
+// let firstLetter = userInput.slice(0,1)
+// let other = userInput.slice(1)
+// let upperCase=firstLetter.toUpperCase()
+// document.write("User input: " + userInput + "<br>")
+// document.write("Title case: "+upperCase+other)
+
+
+
+// Q12)Write a program that converts the variable num to
+// string.
+// var num = 35.36 ;
+// Remove the dot to display “3536” display in your browser.
+// let myNumber = 35.36
+// let myString= myNumber.toString()
+// myString=myString.slice(0,2) +  myString.slice(3) 
+// document.write("Number: "+ myNumber+" <br>Type of " + myNumber+" "+typeof(myNumber) +"<br><br>")
+// document.write("Result: "+ myString+" <br>Type of " + myNumber+" "+typeof(myString))
+
+
+ 
+// Q13)Write a program to take user input and store username in a variable. If the username contains any special symbol among [@ . , !], prompt the user to enter a valid username. For character codes of [@
+// let userName = prompt("enter your name")
+// if (userName.includes===("@") || userName.includes === (".") || userName.includes===("," )|| userName.includes===("!") ){
+//   alert("enter valid user name")
+// }
+
+
+
+// Q14)A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+//Write a program to enable “search by user input” in an
+//array. After searching, prompt the user whether the given
+//item is found in the list or not.
+//Note: Perform case insensitive search. Whether the user
+//enters cookie, Cookie, COOKIE or coOkIE, program
+//should inform about its availability. Example:
+
+// let A = ["cake","Apple","cookie","chips","patties"]
+// var A_lower = A.map(item => item.toLowerCase());
+// var user_input = prompt("Welcome to DEline Cakes, What you want to order Sir/Madam");
+// var user_input_lower = user_input.toLowerCase();
+// if (A_lower.includes(user_input_lower)) {
+//     alert(user_input_lower+" is available at our bakery.");
+// } else {
+//     alert("We are sorry This item is not available in our bakery");
+// }
+
+
+
+// Q15)Write a program to take password as an input from
+// user. The password must qualify these requirements:
+// a. It should contain alphabets and numbers
+// b. It should not start with a number
+// c. It must at least 6 characters long
+// If the password does not meet above requirements,
+// prompt the user to enter a valid password.
+// For character codes of a-z, A-Z & 0-9, refer to ASCII
+// table at the end of this document
+
+// const ascii_of_0 = 48;
+// const ascii_of_small_a = 97;
+// const ascii_of_capital_A = 65;
+
+// let password = prompt("Enter a password: ");
+
+// let hasLength = password.length >= 6;
+// let hasNumber = false;
+// let hasSmallAlphabet = false;
+// let startsWithNumber = password.charCodeAt(0) >= ascii_of_0 && password.charCodeAt(0) <= 57;
+
+// for (let i = 0; i < password.length; i++) {
+//   let charCode = password.charCodeAt(i);
+//   if (charCode >= ascii_of_0 && charCode <= 57) {
+//     hasNumber = true;
+//   } else if (charCode >= ascii_of_small_a && charCode <= 122) {
+//     hasSmallAlphabet = true;
 //   }
-  
-//   document.write("The largest number is: " + largestNum);
-
-// //Q9)Write a program to identify the smallest number in the given array.
-// let arr = [24, 53, 78, 91, 12]
-// let smallNum= arr[0]
-// for (let i = 1; i < arr.length; i++) {
-//     if (arr[i] < smallNum) {
-//       smallNum = arr[i];
-//     }
-//   }
-  
-//   document.write("The smallest number is: " + smallNum);
-
-// //Q)10Write a program to print multiples of 5 ranging 1 to 100.
-// for(i=1;i<=100;i++){
-//     if(i%5===0){
-//         document.write(i, ",")
-//     }
 // }
+
+// if (!hasLength) {
+//   prompt("Your password must be at least 6 characters long. Please enter a new password.");
+// } else if (!hasNumber) {
+//   prompt("Your password must contain at least one number. Please enter a new password.");
+// } else if (!hasSmallAlphabet) {
+//   prompt("Your password must contain at least one small alphabet. Please enter a new password.");
+// } else if (startsWithNumber) {
+//   prompt("Your password cannot start with a number. Please enter a new password.");
+// } else {
+//   document.write("Password: " + password);
+// }
+
+// Q16)Write a program to convert the following string to an
+// array using string split method.
+// var university = “University of Karachi”;
+// Display the elements of array in your browser.
+
+// let university = "University of Karachi"
+
+// for(i=0;i<university.length;i++){
+//     document.write(university[i]+'<br>')
+// }
+
+// Q17)Write a program to display the last character of a user
+// input.
+// let user_input = prompt("enter any word")
+// let lastCharacter = user_input.slice(length-1)
+// document.write(lastCharacter)
+
+// Q18)You have a string “The quick brown fox jumps over the
+// lazy dog”. Write a program to count number of
+// occurrences of word “the” in given string.
+
+// let sentence = "The quick brown fox jumps over the lazy dog";
+// let word = "the";
+
+// let lowercaseSentence = sentence.toLowerCase();
+
+// let words = lowercaseSentence.split(" ");
+
+// let count = 0;
+// for (var i = 0; i < words.length; i++) {
+//   if (words[i] === word) {
+//     count++;
+//   }
+// }
+
+// document.write("Number of occurrences of the word 'the': " + count);
